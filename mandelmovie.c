@@ -52,8 +52,8 @@ int main (int argc, char *argv[])
 
             sprintf(x, "%f", -0.761574);
             sprintf(y, "%f", -0.0847596);
-            sprintf(s, "%f", k * .0005);
-            sprintf(m, "%d", 1000 + k * 100);
+            sprintf(s, "%f", (k * .0005) + 0.0001);
+            sprintf(m, "%d", 1000 + k * 5);
             sprintf(o, "mandel%d.jpg", DFT_SIZE - k);
 
             execlp("./mandel", "./mandel", "-x", x, "-y", y, "-s", s, "-m", m, "-o", o, NULL);
